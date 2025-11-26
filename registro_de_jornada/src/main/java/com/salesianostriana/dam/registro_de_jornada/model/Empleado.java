@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Empleados")
@@ -16,10 +15,11 @@ public class Empleado {
     @Id
     @GeneratedValue
 
-    private Long id;
+    private Long empleado_id;
     private String nombreCompleto;
     private String cargo;
     private BigDecimal salario;
-
-    //@OneToMany(mappedBy = "Departamento", cascade = )
+    @ManyToOne
+    @JoinColumn(name = "departamento_id")
+    private Departamento departamento ;
 }

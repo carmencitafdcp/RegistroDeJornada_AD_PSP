@@ -8,7 +8,6 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
-@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,7 +16,7 @@ public class Departamento {
     @Id
     @GeneratedValue
 
-    private Long id;
+    private Long departamento_id;
     private String nombre;
     private BigDecimal presupuesto;
 }
