@@ -21,5 +21,5 @@ public class Empleado {
     private String cargo;
     private BigDecimal salario;
 
-    @OneToMany(mappedBy = "Departamento", cascade = )
+    //@OneToMany(mappedBy = "Departamento", cascade = )
 }
