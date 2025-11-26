@@ -1,0 +1,23 @@
+package com.salesianostriana.dam.registro_de_jornada.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.*;
+
+import java.math.BigDecimal;
+
+@Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "Departamentos")
+public class Departamento {
+    @Id
+    @GeneratedValue
+
+    private Long id;
+    private String nombre;
+    private BigDecimal presupuesto;
+}
