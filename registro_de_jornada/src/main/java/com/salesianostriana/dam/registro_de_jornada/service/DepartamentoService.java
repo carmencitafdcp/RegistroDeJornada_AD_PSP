@@ -19,4 +19,19 @@ public class DepartamentoService {
             throw new DepartamentoNotFoundException("No hay departamentos registrados");
         return result;
     }
+
+    public Departamento getById(Long id){
+        return departamentoRepository.findById(id)
+                .orElseThrow(() -> new DepartamentoNotFoundException(id));
+    }
+
+//    public void delete(Departamento departamento){
+//        departamentoRepository.deleteById(departamento.getdepartamento_id());
+//    }
+
+    public void deleteById(Long id){
+        departamentoRepository.deleteById(id);
+    }
+
+
 }

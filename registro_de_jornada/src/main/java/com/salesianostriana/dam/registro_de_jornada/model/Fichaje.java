@@ -2,6 +2,7 @@ package com.salesianostriana.dam.registro_de_jornada.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "Fichajes")
+@Builder
 public class Fichaje {
     @Id
     @GeneratedValue
