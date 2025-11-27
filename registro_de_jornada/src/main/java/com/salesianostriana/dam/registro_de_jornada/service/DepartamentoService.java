@@ -2,7 +2,7 @@ package com.salesianostriana.dam.registro_de_jornada.service;
 
 import com.salesianostriana.dam.registro_de_jornada.error.DepartamentoNotFoundException;
 import com.salesianostriana.dam.registro_de_jornada.model.Departamento;
-import com.salesianostriana.dam.registro_de_jornada.model.DepartamentoRepository;
+import com.salesianostriana.dam.registro_de_jornada.repository.DepartamentoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
