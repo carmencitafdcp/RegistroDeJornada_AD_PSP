@@ -60,7 +60,7 @@ El proyecto usa excepciones personalizadas mapeadas a ProblemDetail mediante un 
   - model
   - repository
   - service
-  - config (opcional: OpenApiConfig, DataLoader)
+  - config
 
 ## Servicios (resumen)
 - DepartamentoService
@@ -69,7 +69,7 @@ El proyecto usa excepciones personalizadas mapeadas a ProblemDetail mediante un 
   - findAll, getById, create, edit, delete
   - assignDepartment(empleadoId, deptoId)
   - fichar(empleadoId) -> crea Fichaje alternando ENTRADA/SALIDA
-- FichajeService (si existe separado): lógica de negocio del fichaje
+- FichajeService: lógica de negocio del fichaje
 
 ## Endpoints principales (base: /api/v1)
 - Departamentos
@@ -99,9 +99,8 @@ El proyecto usa excepciones personalizadas mapeadas a ProblemDetail mediante un 
   - GET  /api/v1/empleados/{empleadoId}/fichajes — historial de fichajes
 
 ### Swagger / OpenAPI
-- Swagger UI (interfaz visual, probar endpoints):  
+- Swagger UI:  
   http://localhost:8080/swagger-ui/index.html
-- OpenAPI JSON (spec):  
+- OpenAPI JSON:  
   http://localhost:8080/v3/api-docs
-- Consejo: si usas Spring Security, asegúrate de permitir acceso a /v3/api-docs/** y /swagger-ui/**
 
