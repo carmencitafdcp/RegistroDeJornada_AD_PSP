@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface FichajeRepository extends JpaRepository<Fichaje, Long> {
-    Optional<Fichaje> findUltimoFichaje(Long empleadoId);
-    List<Fichaje> findHistorialFichajes(Long empleadoId);
+    Optional<Fichaje> findTopByEmpleadoIdOrderByMomentoDesc(Long empleadoId);
+    //Esto es para los fichajes que puede que aun no existan
+    List<Fichaje> findByEmpleadoIdOrderByMomentoDesc(Long empleadoId);
 }

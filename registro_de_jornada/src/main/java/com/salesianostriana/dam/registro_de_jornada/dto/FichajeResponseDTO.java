@@ -12,7 +12,7 @@ public record FichajeResponseDTO(
     public static FichajeResponseDTO fromEntity(Fichaje f) {
         if (f == null) return null;
         return new FichajeResponseDTO(
-                f.getFichaje_id(),
+                f.getId(),
                 f.getMomento(),
                 f.getTipo()
         );

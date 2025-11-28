@@ -16,11 +16,11 @@ public record EmpleadoResponseDTO(
         Long deptId = null;
         String deptNombre = null;
         if (e.getDepartamento() != null) {
-            deptId = e.getDepartamento().getDepartamento_id();
+            deptId = e.getDepartamento().getId();
             deptNombre = e.getDepartamento().getNombre();
         }
         return new EmpleadoResponseDTO(
-                e.getEmpleado_id(),
+                e.getId(),
                 e.getNombreCompleto(),
                 e.getCargo(),
                 e.getSalario(),

@@ -11,7 +11,7 @@ public record DepartamentoResponseDTO(
     public static DepartamentoResponseDTO fromEntity(Departamento d) {
         if (d == null) return null;
         return new DepartamentoResponseDTO(
-                d.getDepartamento_id(),
+                d.getId(),
                 d.getNombre(),
                 d.getPresupuesto()
         );
